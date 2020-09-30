@@ -20,6 +20,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.zip'
     goals: 'package'
-steps:
+
 - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
   artifact: WebApp
