@@ -18,8 +18,8 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
-    testResultsFiles: '/TEST-*.zip'
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/_ammad-khalid.pipelines-java/test/TEST-*.zip'
     goals: 'package'
 
-- publish: '$(Build.ArtifactStagingDirectory)'
+- publish: '$(System.DefaultWorkingDirectory)/_ammad-khalid.pipelines-java/test/TEST-*.zip'
   artifact: test
