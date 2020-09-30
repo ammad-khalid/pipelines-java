@@ -21,5 +21,5 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.zip'
     goals: 'package'
 
-- publish: $(System.DefaultWorkingDirectory)/
+- publish: '**/surefire-reports/TEST-*.zip'
   artifact: test
